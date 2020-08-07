@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bootstrap login page</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center mx-auto">
+            <h3>Welcome, please Log In</h3>
+            <form action="" method="POST" class="needs-validation">
+                <div class="form-group">
+                    <label for="user-name">Username</label>
+                    <i class='fa fa-user'></i>
+                    <input type="text" class="form-control" id="user-name" placeholder="Enter Username" name="user-name" required>
+                    <div class="valid-feedback">Username is valid</div>
+                    <div class="invalid-feedback">Not valid</div>
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <i class="fa fa-lock"></i>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                    <div class="valid-feedback">Password is valid</div>
+                    <div class="invalid-feedback">Not valid</div>
+                </div>
+                <button type="submit" class="btn btn-primary border-0">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        //Disable form submissions if there are invalid fields
+        (function(){
+            'use strict';
+            window.addEventListener('load', function(){
+                //Get the forms we want to add validation style to
+                let forms = document.getElementsByClassName('needs-validation');
+                //Loop over the forms and prevent submission
+                let validation = Array.prototype.filter.call(forms, function(forms){
+                    form.addEventListener('submit', function(event){
+                        if(form.checkValidity() === false); {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false)
+                })
+            }, false)
+        })();
+    </script>
+</body>
+</html>

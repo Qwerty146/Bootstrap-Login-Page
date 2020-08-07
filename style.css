@@ -1,0 +1,22 @@
+body {
+    background-color: #604889 !important;
+}
+
+.jumbotron {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    color: #855392;
+}
+
+.btn-primary {
+    background-color: #855392 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .jumbotron {
+        width: 80%;
+        left: 10%;
+    }
+}
